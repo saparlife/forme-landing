@@ -100,7 +100,7 @@ export default function Home() {
         <div className="relative z-10 text-center max-w-2xl">
           {/* Logo */}
           <h1
-            className="text-[clamp(4rem,15vw,10rem)] leading-none mb-8 bg-gradient-to-r from-[#5A493B] via-[#B49D7E] to-[#5A493B] dark:from-[#B49D7E] dark:via-[#EFE8D9] dark:to-[#B49D7E] bg-clip-text text-transparent bg-[length:200%_auto] animate-[shimmer_8s_ease-in-out_infinite]"
+            className="text-[clamp(4rem,15vw,10rem)] leading-none mb-8 bg-gradient-to-r from-[#5A493B] via-[#B49D7E] to-[#5A493B] bg-clip-text text-transparent bg-[length:200%_auto] animate-shimmer"
             style={{ fontFamily: "'Alias', serif" }}
           >
             formē
@@ -283,12 +283,6 @@ export default function Home() {
         </div>
       )}
 
-      <style jsx>{`
-        @keyframes shimmer {
-          0%, 100% { background-position: 0% center; }
-          50% { background-position: 100% center; }
-        }
-      `}</style>
     </>
   );
 }
