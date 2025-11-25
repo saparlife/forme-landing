@@ -1,11 +1,9 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import { ThemeProvider } from "@/components/ThemeProvider";
-import { LanguageProvider } from "@/components/LanguageProvider";
 
 export const metadata: Metadata = {
   title: "FORMÉ — Женский фитнес-клуб",
-  description: "Приватное пространство сильных женщин. Персональные тренировки, пилатес на реформере.",
+  description: "Приватное пространство сильных женщин. ПН-ПТ 07:00-23:00, СБ-ВС 09:00-22:00",
   openGraph: {
     title: "FORMÉ — Женский фитнес-клуб",
     description: "Приватное пространство сильных женщин",
@@ -19,17 +17,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="ru" suppressHydrationWarning>
+    <html lang="ru">
       <head>
         <link rel="icon" href="/favicon.png" />
       </head>
-      <body className="antialiased">
-        <ThemeProvider>
-          <LanguageProvider>
-            {children}
-          </LanguageProvider>
-        </ThemeProvider>
-      </body>
+      <body className="antialiased">{children}</body>
     </html>
   );
 }
